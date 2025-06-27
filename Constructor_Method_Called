@@ -1,0 +1,8 @@
+public class Constructor_method {
+    Constructor_method(){
+        System.out.println("Constructor Called ");
+    }
+    public static void main(String args[]){
+        Constructor_method obj=new Constructor_method();
+    }
+}
