@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Loop {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int counter=sc.nextInt();
+        int i=0;
+        while(i<counter){
+            if(i==5){
+                i++;
+                continue;
+            }
+            System.out.println(i);
+            ++i;
+        }
+    }
+}
