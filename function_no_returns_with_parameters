@@ -1,0 +1,8 @@
+public class noreturnswithparameters {
+    public static void greet(String name){
+        System.out.println("Hello, "+name+"I");
+    }
+    public static void main(String args[]){
+        greet("Eshwar by \nShruti*.*.*.*.*.*");
+    }   
+}
