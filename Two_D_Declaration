@@ -1,0 +1,9 @@
+import java.util.*;
+public class twodarraydeclaration {
+    public static void main(String args[]){
+        int[][]matrix=new int[2][3];
+        int[][] mat={{1,2,3},{4,5,6}};
+        System.out.println(Arrays.deepToString(matrix));
+        System.out.println(Arrays.deepToString(mat));
+    }   
+}
