@@ -1,0 +1,35 @@
+interface Clickable {
+    default void click() {
+        System.out.println("click");
+    }
+
+    default void print() {
+        System.out.println("clickable");
+    }
+}
+
+interface Accessible {
+    default void access() {
+        System.out.println("access");
+    }
+
+    default void print() {
+        System.out.println("accessible");
+    }
+}
+
+public class DiamondProblemUsedClickableAccessible_Interface implements Clickable, Accessible {
+    @Override
+    public void print() {
+        Clickable.super.print();
+        Accessible.super.print();
+    }
+
+    public static void main(String[] args) {
+        DiamondProblemUsedClickableAccessible_Interface obj = new DiamondProblemUsedClickableAccessible_Interface();
+        obj.click();
+        obj.access();
+        obj.print();
+    }
+}
+
