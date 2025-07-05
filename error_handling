@@ -1,7 +1,7 @@
 public class handleerror {
     public static void main( String args[]){
         int a=123456,b=0;
-        for(int i=10;i>=5;i--)
+        for(int i=10;i>-5;i--)
         {
             try{
                 b=a/i;
