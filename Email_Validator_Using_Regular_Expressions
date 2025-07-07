@@ -1,0 +1,7 @@
+public class Regexxx {
+    public static void main(String[] args) {
+        String email="test21362@example.com";
+        boolean r=email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$");
+        System.out.println(r);
+    }
+}
