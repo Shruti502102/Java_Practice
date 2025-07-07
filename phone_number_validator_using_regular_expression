@@ -1,0 +1,6 @@
+public class phonenumbervalidator {
+    public static void main(String args[]){
+        String phone="963276743";
+        System.out.println(phone.matches("[6-9]\\d{9}"));
+    }  
+}
