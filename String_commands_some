@@ -23,6 +23,7 @@ public class Stringss {
         String s5="banananana";
         System.out.println(s5.replace('a','o'));
         System.out.println(s5.replaceAll("na","6475dsnhsdbf"));
+        System.out.println(a.substring(0,1).toUpperCase()+""+a.substring(1));
     }
 }
 
