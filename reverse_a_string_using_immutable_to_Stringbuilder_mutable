@@ -1,0 +1,7 @@
+public class reverse_a_string {
+    public static void main(String args[]){
+        String str="shruti";
+        String rev=new StringBuilder(str).reverse().toString();
+        System.out.println(rev);    
+    }   
+}
