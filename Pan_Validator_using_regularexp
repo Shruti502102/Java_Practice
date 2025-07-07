@@ -1,0 +1,11 @@
+import java.util.*;
+public class panvalidator {
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        String pan="ABHDS2221F";
+        System.out.println("Eg:"+pan);
+        System.out.println(pan.matches("[A-Z]{5}[0-9]{4}[A-Z]"));
+        String pan1=sc.nextLine();
+        System.out.println(pan1.matches("[A-Z]{5}[0-9]{4}[A-Z]"));        
+    }
+}
