@@ -1,0 +1,13 @@
+public class Integer_Methods {
+    public static void main(String args[]){
+        Integer obj=50;
+        System.out.println(""+Integer.parseInt("123"));
+        System.out.println(Integer.valueOf("456"));
+        System.out.println(Integer.toString(789));
+        System.out.println(Integer.compare(10,20));
+        System.out.println(obj.equals(50));
+        System.out.println(obj.intValue());
+        System.out.println(Integer.toBinaryString(10));
+        System.out.println(Integer.toHexString(255));
+    }   
+}
