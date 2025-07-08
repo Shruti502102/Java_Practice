@@ -1,0 +1,9 @@
+public class BoxingUnboxing {
+    public static void main(String args[]){
+        int a=50;
+        Integer obj=a;//Autoboxing-creating a primitive data type based value to an object using wrapper class functions like Integer
+        int b=obj;//Auto-unboxing
+        System.out.println("Object"+obj);
+        System.out.println("Primitive"+b);           
+    }   
+}
