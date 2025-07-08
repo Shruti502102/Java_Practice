@@ -1,0 +1,8 @@
+//parsing string to an integer
+public class Wrapper_class {
+    public static void main(String[] args) {
+        String s="63733";
+        int num=Integer.parseInt(s);//using wrapper class method
+        System.out.println(num*2);
+    }
+}
