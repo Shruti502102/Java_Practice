@@ -1,0 +1,51 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
+ */
+
+package com.mycompany.graph;
+
+/**
+ *
+ * @author Student
+ */
+import java.util.*;
+class Graphss {//DFS MATRIX
+    int vertices;
+    int[][] matrix;
+    Graphss(int v){
+        vertices=v;
+        matrix=new int[v][v];
+        
+    }
+    void addEdgesindfs(int src,int dest){
+        matrix[src][dest]=1;
+    }
+    void startdfs(int start){
+        boolean[] visited=new boolean[vertices];
+        Stack<Integer> stack=new Stack<>();
+        stack.push(start);
+        while(!stack.isEmpty()){
+            int node=stack.pop();
+            if(!visited[node]){
+                visited[node]=true;
+                System.out.print(node+" ");
+                for(int i=vertices-1;i>=0;i--){
+                    if(matrix[node][i]==1 &&!visited[i]){
+                        stack.push(i);
+                    }
+                }
+            }
+        }
+    }
+    public static void main(String[] args) {
+        Graphss g=new Graphss(6);
+        g.addEdgesindfs(0, 1);
+        g.addEdgesindfs(0, 2);
+        g.addEdgesindfs(1, 3);
+        g.addEdgesindfs(2, 4);
+        g.addEdgesindfs(3, 5);
+        g.startdfs(0);
+        
+    }
+}
