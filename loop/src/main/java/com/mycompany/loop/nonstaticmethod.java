@@ -1,0 +1,19 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.loop;
+
+/**
+ *
+ * @author Student
+ */
+public class nonstaticmethod {
+    public void display(){
+        System.out.println("This is a non-static method.");
+    }
+    public static void main(String args[]){
+        nonstaticmethod obj=new nonstaticmethod();
+        obj.display();
+    }  
+}
