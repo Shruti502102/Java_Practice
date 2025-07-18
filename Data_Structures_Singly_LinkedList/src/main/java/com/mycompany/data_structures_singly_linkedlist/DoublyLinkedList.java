@@ -1,0 +1,116 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.data_structures_singly_linkedlist;
+
+/**
+ *
+ * @author Student
+ */
+class DoublyLinkedList {
+    class Node{
+        int data;
+        Node prev,next;
+        Node(int d){
+            data=d;
+        }
+        
+    }
+    Node head;
+    void insertAtBegin(int data){
+        Node newNode=new Node(data);
+        newNode.next=head;
+        if(head!=null)
+            head.prev=newNode;
+        head=newNode;    
+        
+    }
+    void insertAtEnd(int data){
+        Node newNode=new Node(data);
+        if(head==null){
+            head=newNode;
+            return;
+        }
+        Node temp=head;
+        while(temp.next!=null)
+            temp=temp.next;
+        temp.next=newNode;
+        newNode.prev=temp;
+    }
+    void insertAtPosition(int data,int pos){
+        if(pos==1){
+            insertAtBegin(data);
+            return;
+        }
+        Node newNode=new Node(data);
+        Node temp=head;
+        for(int i=1;i<pos-1 && temp!=null;i++)
+            temp=temp.next;
+        if(temp==null)
+            return;
+        newNode.next=temp.next;
+        if(temp.next!=null)
+            temp.next.prev=newNode;
+        temp.next=newNode;
+        newNode.prev=temp;
+    }
+    void deleteAtBegin(){
+        if(head==null)
+            return;
+        head=head.next;
+        if(head!=null)
+            head.prev=null;        
+    }
+    void deleteAtEnd(){
+        if(head==null)
+            return;
+        if(head.next==null){
+            head=null;
+            return;
+        }
+        Node temp=head;
+        while(temp.next!=null)
+            temp=temp.next;
+        temp.prev.next=null;
+    }
+    void deleteAtPosition(int pos){
+        if(head==null)
+            return;
+        if(pos==1){
+            deleteAtBegin();
+            return;
+        }
+        Node temp=head;
+        for(int i=1;i<pos && temp !=null;i++)
+            temp=temp.next;
+        if(temp==null)
+            return;
+        if(temp.prev!=null)
+            temp.prev.next=temp.next;
+        if(temp.next!=null)
+            temp.next.prev=temp.prev;
+    }
+    void display(){
+        Node temp=head;
+        while(temp!=null){
+            System.out.println(temp.data+" ");
+            temp=temp.next;
+        }
+        System.out.println();
+    }
+    public static void main(String args[]){
+        DoublyLinkedList dl=new DoublyLinkedList();
+        dl.insertAtBegin(10);
+        dl.insertAtEnd(20);
+        dl.insertAtPosition(121,2);
+        dl.insertAtPosition(1321, 4);
+        dl.insertAtEnd(5);
+        dl.display();
+        dl.deleteAtBegin();
+        dl.display();
+        dl.deleteAtEnd();
+        dl.display();
+        dl.deleteAtPosition(2);
+    }   
+}
