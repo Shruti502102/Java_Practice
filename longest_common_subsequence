@@ -39,6 +39,7 @@ public class lcs_longest_common_subsequence {
         System.out.println("Enter Second String : ");
         String s2=sc.next();
         String lcs=findlcs(s1,s2);
+        System.out.println("Length of LCS: "+lcs.length());
         System.out.println("LCS: "+lcs);
     }
 }
